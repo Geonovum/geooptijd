@@ -8,3 +8,8 @@ geboortejaar kunstenaars vs bv dichtheid en locatie en combineren met RKD
 
 4. [CEDAR](https://druid.datalegend.net/dataLegend/CEDAR-S/schema) - 
 5. [RKD_sparql_endpoint](https://rkd.triply.cc/rkd/RKD-Knowledge-Graph/sparql)
+
+Input van Monique
+Dinsdag - middag mbt borging interessante tool
+[BOMOS](https://regelhulpenvoorbedrijven.nl/bomos-assessment-tool/)
+Strategie, financien, operationeel
