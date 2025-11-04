@@ -36,7 +36,7 @@ let respecConfig = {
   shortName: "nl-lpf",
   
   //edDraftURI = De URI van de draft version. Deze wordt automatisch afgeleid van de github URI; maar kan hier overschreven worden. 
-  edDraftURI: "https://geonovum.github.io/nl-lpf",
+  edDraftURI: "https://geonovum.github.io/nl-lpf/",
 
   //-- publishDate is verplicht. Als je werkversie gekozen hebt  dan pakt Respec
   //-- de pushdate maar de publishDate is nog steeds verplicht.
