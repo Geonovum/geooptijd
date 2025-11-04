@@ -1,7 +1,7 @@
 
 Welcome to Pa11y
 
- > Running Pa11y on URL file:///home/runner/work/NL-ReSpec-template/NL-ReSpec-template/snapshot.html
+ > Running Pa11y on URL file:///home/runner/work/geooptijd/geooptijd/snapshot.html
 
 No issues found!
 
