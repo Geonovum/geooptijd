@@ -1393,23 +1393,103 @@ ul.index code{color:inherit}
   </div>
 <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: samenvatting van het document</p>
 </section>
-<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding-op-het-toepassingsprofiel"><bdi class="secno">1. </bdi>Inleiding op het toepassingsprofiel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aanleiding"><bdi class="secno">1.1 </bdi>Aanleiding</a></li><li class="tocline"><a class="tocxref" href="#afbakening-en-uitgangspunten"><bdi class="secno">1.2 </bdi>Afbakening en uitgangspunten</a></li><li class="tocline"><a class="tocxref" href="#uitgangsbronnen-en-inspiratie"><bdi class="secno">1.3 </bdi>Uitgangsbronnen en inspiratie</a></li><li class="tocline"><a class="tocxref" href="#belangrijkste-uitbreidingen"><bdi class="secno">1.4 </bdi>Belangrijkste uitbreidingen</a></li><li class="tocline"><a class="tocxref" href="#modellering-en-keuzes"><bdi class="secno">1.5 </bdi>Modellering en keuzes</a></li><li class="tocline"><a class="tocxref" href="#technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">1.7 </bdi>Conclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gegevensdefinitie"><bdi class="secno">2. </bdi>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">2.1 </bdi>Definities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names"><bdi class="secno">2.1.1 </bdi>Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.3 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.4 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
+<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding-op-het-toepassingsprofiel"><bdi class="secno">1. </bdi>Inleiding op het toepassingsprofiel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aanleiding"><bdi class="secno">1.1 </bdi>Aanleiding</a></li><li class="tocline"><a class="tocxref" href="#afbakening-en-uitgangspunten"><bdi class="secno">1.2 </bdi>Afbakening en uitgangspunten</a></li><li class="tocline"><a class="tocxref" href="#uitgangsbronnen-en-inspiratie"><bdi class="secno">1.3 </bdi>Uitgangsbronnen en inspiratie</a></li><li class="tocline"><a class="tocxref" href="#belangrijkste-uitbreidingen"><bdi class="secno">1.4 </bdi>Belangrijkste uitbreidingen</a></li><li class="tocline"><a class="tocxref" href="#modellering-en-keuzes"><bdi class="secno">1.5 </bdi>Modellering en keuzes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kernprincipes"><bdi class="secno">1.5.1 </bdi>Kernprincipes</a></li><li class="tocline"><a class="tocxref" href="#temporalisering"><bdi class="secno">1.5.2 </bdi>Temporalisering</a></li><li class="tocline"><a class="tocxref" href="#geometrie"><bdi class="secno">1.5.3 </bdi>Geometrie</a></li><li class="tocline"><a class="tocxref" href="#gebruik-binnen-nl-lp"><bdi class="secno">1.5.4 </bdi>Gebruik binnen NL-LP</a></li></ol></li><li class="tocline"><a class="tocxref" href="#technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">1.7 </bdi>Conclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gegevensdefinitie"><bdi class="secno">2. </bdi>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">2.1 </bdi>Definities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names"><bdi class="secno">2.1.1 </bdi>Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.3 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.4 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
 
 
 <section class="informative" id="inleiding-op-het-toepassingsprofiel"><div class="header-wrapper"><h2 id="x1-inleiding-op-het-toepassingsprofiel"><bdi class="secno">1. </bdi>Inleiding op het toepassingsprofiel</h2><a class="self-link" href="#inleiding-op-het-toepassingsprofiel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
 <section id="aanleiding"><div class="header-wrapper"><h3 id="x1-1-aanleiding"><bdi class="secno">1.1 </bdi>Aanleiding</h3><a class="self-link" href="#aanleiding" aria-label="Permalink for Section 1.1"></a></div>
-<p>Erfgoedinstellingen beheren waardevolle informatie die sterk verbonden is met specifieke locaties. Tien jaar geleden heeft dit al geleid tot het project Erfgoed &amp; Locatie. Voor een effectieve ontsluiting en benutting van deze data is het noodzakelijk om erfgoedinformatie te koppelen aan geografische locaties uit het verleden (historische geo-informatie). Dit maakt het mogelijk om historische gegevens ruimtelijk te verkennen en zogenaamde tijdreizen op locatie uit te voeren, waarbij gebruikers van bijvoorbeeld de 
-<a href="https://www.cultureelerfgoed.nl/onderwerpen/bronnen-en-kaarten/overzicht/erfgoedatlas" target="_blank">Erfgoedatlas</a> en de <a href="https://hisgis.nl/" target="_blank">HisGIS</a> door verschillende historische datasets heen kunnen navigeren en zo het verleden geografisch kunnen ervaren en analyseren.</p>
+<p>Erfgoedinstellingen beheren waardevolle informatie die sterk verbonden is met specifieke locaties, in specifieke momenten in de tijd. Voor een effectieve ontsluiting en benutting van deze data is het noodzakelijk om erfgoedinformatie te koppelen aan geografische locaties uit het verleden (historische geo-informatie), waarbij de historische context van die locatie geborgd blijft. Moderne plaatsnamen-databanken (gazetteers) zoals <a href="https://geonames.org/" target="_blank">GeoNames</a>, <a href="https://www.getty.edu/research/tools/vocabularies/tgn/index.html" target="_blank">Getty TGN</a>, <a href="https://wikidata.org/" target="_blank">Wikidata</a> of de <a href="https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag" target="_blank">BAG</a> bieden wel veel plaatsen, maar zijn beperkt bruikbaar voor historische aanduidingen zoals oude gemeentenamen, spellingsvarianten, verdwenen dorpen, of administratieve eenheden uit het verleden. Tien jaar geleden is in het kader van het project <a href="http://erfgoedenlocatie.nl" target="_blank">Erfgoed &amp; Locatie</a> al een poging gedaan om te voorzien in de behoefte om historische geografische informatie in Nederland beter te ontsluiten, maar dit project wordt niet meer onderhouden. </p>
+<p>Het op een juiste manier ontsluiten van historische geo-informatie maakt het mogelijk om historische gegevens effectief ruimtelijk te verkennen en zogenaamde tijdreizen op locatie uit te voeren, waarbij gebruikers van bijvoorbeeld de 
+<a href="https://www.cultureelerfgoed.nl/onderwerpen/bronnen-en-kaarten/overzicht/erfgoedatlas" target="_blank">Erfgoedatlas</a>, <a href="https://hisgis.nl/" target="_blank">HisGIS</a>, of de vele verschillende lokale Time Machines door verschillende historische datasets heen kunnen navigeren en zo het verleden geografisch kunnen ervaren en analyseren. </p>
 <p>In dit kader hebben het <a href="https://netwerkdigitaalerfgoed.nl/wat-wij-doen/" target="_blank">Netwerk Digitaal Erfgoed</a>, de <a href="https://www.cultureelerfgoed.nl/over-ons" target="_blank">Rijksdienst voor het Cultureel Erfgoed</a>, het <a href="https://huc.knaw.nl/about-us/" target="_blank">KNAW Humanities Cluster</a> en <a href="https://www.geonovum.nl/over-geonovum" target="_blank">Geonovum</a> de handen ineen geslagen om het digitaal erfgoed domein en geo-informatie domein met elkaar te verbinden. Door middel van een focusweek is er gewerkt aan voorbeelden en de basis voor standaardisatie en architectuur. Dit document, het Nederlands Profiel voor Linked Places, is gebaseerd op de internationale standaard voor <a href="https://github.com/LinkedPasts/linked-places-format" target="_blank">Linked Places</a>. </p>
 </section><section id="afbakening-en-uitgangspunten"><div class="header-wrapper"><h3 id="x1-2-afbakening-en-uitgangspunten"><bdi class="secno">1.2 </bdi>Afbakening en uitgangspunten</h3><a class="self-link" href="#afbakening-en-uitgangspunten" aria-label="Permalink for Section 1.2"></a></div>
-<p>TO DO</p>
 </section><section id="uitgangsbronnen-en-inspiratie"><div class="header-wrapper"><h3 id="x1-3-uitgangsbronnen-en-inspiratie"><bdi class="secno">1.3 </bdi>Uitgangsbronnen en inspiratie</h3><a class="self-link" href="#uitgangsbronnen-en-inspiratie" aria-label="Permalink for Section 1.3"></a></div>
 <p>TO DO</p>
+<p>Ongeveer tegelijkertijd met het ontstaan van Erfgoed en Locatie en haar '<a href="https://netwerkdigitaalerfgoed.nl/wp-content/uploads/2021/01/historische_geocoderhackalod2021_jvand.pdf">Places in Time</a>' model, werkte de Pelagios Gazetteer (een internationale digitale plaatsnamendatabank voor de antieke wereld) aan het <a href="https://github.com/pelagios/pelagios-cookbook/wiki/Pelagios-Gazetteer-Interconnection-Format">Pelagios Gazetteer Interconnection Format</a>. Beide projecten werkten met enigszins vergelijkbare uitgangspunten om historische plaatsen te ontsluiten. Darabij is bijvoorbeeld te denken aan de volgende elementen die een 'plaats in tijd' heeft of kan hebben:</p>
+<ul>
+<li>Een titel of <em>preferred label</em></li>
+<li>Een (arbitraire) naam (vermelding, attestatie, of (spellings)variant)</li>
+<li>Provenantie (een link naar de bron)</li>
+<li>Een unieke identifier</li>
+<li>Een plaatstype (de <em>plaats</em> Groningen, de <em>gemeente</em> Groningen, de <em>provincie</em> Groningen, de <em>rivier</em> de Hunze, de <em>straat</em> Astraat)</li>
+<li>Een tijdsaanduiding, die zowel op de plaats als op attributen kan slaan</li>
+<li>Een of meerdere geometrieën</li>
+<li>Een of meerdere relaties (hiërarchisch, ruimtelijk) met andere plaatsen</li>
+<li>Een of meerdere links met andere terminologische bronnen (veelgebruikt zijn GeoNames, Wikidata, Getty TGN)</li>
+</ul>
+<p>Het <em>Pelagios Gazetteer Interconnection Format</em> (PGIF) is inmiddels doorontwikkeld en volledig vervangen door het Linked Places format (LPF), dat in de laatste jaren internationaal veel tractie heeft gekregen. In die zin is het ook de logische opvolger geworden van het in Nederland ontwikkelde 'Places in Time' van Erfgoed en Locatie. Ten opzichte van het PGIF zijn de volgende wijzigingen doorgevoerd:</p>
+<ul>
+<li>Het is ontworpen rondom de JSON-LD syntax, waardoor het zowel valide RDF (XML, Turtle, etc.) als JSON oplevert</li>
+<li>Het is valide GeoJSON en daardoor snel in verschillende web mapping applicaties weer te geven. Meer precies, het is een implementatie van GeoJSON-T, een experimentele extensie op GeoJSON die de representatie van tijdsaanduidingen standaardiseren</li>
+<li>Het voegt de mogelijkheid toe om verschillende attributen (naamsaanduidingen, geometrie, plaatstype, en plaatsrelaties) te koppelen aan een tijdsaanduidingen</li>
+</ul>
+<p>Het Linked Places format is voortgekomen uit de bijeenkomsten van <a href="https://linkedpasts.hcommons.org">Linked Pasts</a>, een jaarlijks symposium met internationale professionals en wetenschappers die werken op het snijvlak van erfgoed en Linked Open Data. Het Linked Pasts symposium is formeel partner van het <a href="https://pelagios.org/about-us/">Pelagios Network</a>, het internationale netwerk waarin de meeste van deze professionals aan verbonden zijn. Dit netwerk is, zoals de naam al doet vermoeden, voortgekomen uit de hierboven genoemde Pelagios Gazetteer. </p>
+<p>Een andere grote partner in het Pelagios Network, en bovendien de grote aanjager van het Linked Pasts format, is de <a href="https://whgazetteer.org">World Historical Gazetteer</a> (WHG). Dit project wordt vanuit het <a href="https://www.ishi.pitt.edu">Institute of Spatial History Innovations</a> van de University of Pittsburgh geleid, maar kent een brede groep gebruikers <em>en</em> partners, waaronder het KNAW Humanities Cluster. De WHG is een platform waar records over historische plaatsen kunnen worden samengebracht en uitgewisseld. </p>
+<p>Hoewel het Linked Places format niet is uitontwikkeld of formeel als standaard is vastgelegd, is het in de afgelopen jaren wel tot een <em>de facto</em> standaard uitgegroeid en wordt het breed gedragen en geïmplementeerd door de verschillende partners aangesloten op het Pelagios Network. De World Historical Gazetteer heeft een eigen validator ontwikkeld om JSON-LD bestanden te <a href="https://github.com/WorldHistoricalGazetteer/website/blob/staging/validation/static/lpf_v2.0.jsonld">valideren</a>.</p>
 </section><section id="belangrijkste-uitbreidingen"><div class="header-wrapper"><h3 id="x1-4-belangrijkste-uitbreidingen"><bdi class="secno">1.4 </bdi>Belangrijkste uitbreidingen</h3><a class="self-link" href="#belangrijkste-uitbreidingen" aria-label="Permalink for Section 1.4"></a></div>
 <p>TO DO</p>
 </section><section id="modellering-en-keuzes"><div class="header-wrapper"><h3 id="x1-5-modellering-en-keuzes"><bdi class="secno">1.5 </bdi>Modellering en keuzes</h3><a class="self-link" href="#modellering-en-keuzes" aria-label="Permalink for Section 1.5"></a></div>
-<p>TO DO </p>
-</section><section id="technische-keuzes"><div class="header-wrapper"><h3 id="x1-6-technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</h3><a class="self-link" href="#technische-keuzes" aria-label="Permalink for Section 1.6"></a></div>
+<p>
+    Het Nederlands profiel voor Linked Places (NL-LP) bouwt voort op de 
+    <a href="https://github.com/LinkedPasts/linked-pasts-ontology">Linked Pasts Ontology (LPO v1.1)</a>.
+    De LPO biedt een formele RDF-laag bovenop het <a href="https://purl.org/geojson/vocab#">GeoJSON-model</a>,
+    waarmee historische en geografische gegevens semantisch en temporeel kunnen worden beschreven.
+    Het profiel gebruikt deze ontologie om historische plaatsgegevens uit het Nederlandse erfgoeddomein 
+    als Linked Data te publiceren.
+  </p>
+
+  <section id="kernprincipes"><div class="header-wrapper"><h4 id="x1-5-1-kernprincipes"><bdi class="secno">1.5.1 </bdi>Kernprincipes</h4><a class="self-link" href="#kernprincipes" aria-label="Permalink for Section 1.5.1"></a></div>
+  <ul>
+    <li>
+      Een plaats of ander geografisch object wordt gemodelleerd als een 
+      <code>geojson:Feature</code> binnen een <code>geojson:FeatureCollection</code>.
+    </li>
+    <li>
+      De ruimtelijke en temporele reikwijdte van een object wordt vastgelegd als een
+      <code>lpo:Setting</code>. Deze kan een geometrie, een tijdsinterval of beide bevatten.
+    </li>
+    <li>
+      Tijd wordt gemodelleerd via <code>lpo:when</code> dat verwijst naar een
+      <code>lpo:Timespan</code>, een subklasse van <code>time:ProperInterval</code>.
+    </li>
+    <li>
+      Attestaties (bewijzen of vermeldingen) zijn afgeleid van 
+      <code>lawd:Attestation</code> en geven context aan namen, typen en relaties.
+      De LPO onderscheidt vier hoofdvormen:
+      <ul>
+        <li><code>lpo:NameAttestation</code> – koppelt een naam (<code>lpo:toponym</code>) aan een bron of periode;</li>
+        <li><code>lpo:TypeAttestation</code> – legt vast welk type (bijv. stad, rivier) een plaats had;</li>
+        <li><code>lpo:RelAttestation</code> – beschrijft relaties tussen plaatsen (zoals “onderdeel van”);</li>
+        <li><code>lpo:LinkAttestation</code> – verbindt een entiteit met een externe bron of gazetteer.</li>
+      </ul>
+    </li>
+  </ul>
+
+  </section><section id="temporalisering"><div class="header-wrapper"><h4 id="x1-5-2-temporalisering"><bdi class="secno">1.5.2 </bdi>Temporalisering</h4><a class="self-link" href="#temporalisering" aria-label="Permalink for Section 1.5.2"></a></div>
+  <p>
+    De eigenschap <code>lpo:when</code> kan aan vrijwel elk element worden toegevoegd om de periode 
+    van geldigheid of bestaan aan te geven. Een <code>lpo:Timespan</code> kan grenzen hebben
+    (<code>lpo:earliest</code>, <code>lpo:latest</code>) of een expliciete start- en eindtijd
+    (<code>lpo:has_start</code>, <code>lpo:has_end</code>).
+    Ook relaties en naamattestaties kunnen een eigen tijdsbereik hebben.
+  </p>
+
+  </section><section id="geometrie"><div class="header-wrapper"><h4 id="x1-5-3-geometrie"><bdi class="secno">1.5.3 </bdi>Geometrie</h4><a class="self-link" href="#geometrie" aria-label="Permalink for Section 1.5.3"></a></div>
+  <p>
+    De eigenschap <code>geojson-t:geometry</code> (uit GeoJSON-T) is een uitbreiding van 
+    <code>geojson:geometry</code> die toelaat om een geometrie te koppelen aan een
+    <code>lpo:Setting</code>, inclusief temporele context (<code>lpo:when</code>).
+  </p>
+
+  </section><section id="gebruik-binnen-nl-lp"><div class="header-wrapper"><h4 id="x1-5-4-gebruik-binnen-nl-lp"><bdi class="secno">1.5.4 </bdi>Gebruik binnen NL-LP</h4><a class="self-link" href="#gebruik-binnen-nl-lp" aria-label="Permalink for Section 1.5.4"></a></div>
+  <p>
+    In het Nederlands profiel worden deze LPO-constructies toegepast op erfgoedlocaties, 
+    historische administratieve eenheden en andere plaatsen met ruimtelijke en temporele variatie. 
+    Elke historische naam of afbakening wordt vastgelegd als een afzonderlijke
+    <code>lpo:NameAttestation</code> of <code>lpo:TypeAttestation</code> met eigen periode en bron.
+  </p> 
+
+</section></section><section id="technische-keuzes"><div class="header-wrapper"><h3 id="x1-6-technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</h3><a class="self-link" href="#technische-keuzes" aria-label="Permalink for Section 1.6"></a></div>
 <p>TO DO </p>
 </section><section id="conclusie"><div class="header-wrapper"><h3 id="x1-7-conclusie"><bdi class="secno">1.7 </bdi>Conclusie</h3><a class="self-link" href="#conclusie" aria-label="Permalink for Section 1.7"></a></div>
 </section></section>
