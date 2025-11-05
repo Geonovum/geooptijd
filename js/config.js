@@ -3,7 +3,7 @@ let respecConfig = {
   useLabel: true,
 
   // TODO: title is verplicht! Neem hieronder de titel van het document op
-  title: "Nederlands profiel voor Linked Places (LPF)",
+  title: "Nederlands profiel voor Linked Places (NL-LP)",
   //-- specStatus is verplicht! (activeer 1 van de volgende)
   specStatus: "wv",                 // Werkversie
   //specStatus: "cv",               // Consultatieversie
@@ -33,10 +33,10 @@ let respecConfig = {
   license: "cc-by",                 // Attribution, met bronvermelding
 
   //-- TODO shortName is verplicht! (komt in de URL: kies logische afkorting)
-  shortName: "nl-lpf",
+  shortName: "nl-lp",
   
   //edDraftURI = De URI van de draft version. Deze wordt automatisch afgeleid van de github URI; maar kan hier overschreven worden. 
-  edDraftURI: "https://geonovum.github.io/nl-lpf/",
+  edDraftURI: "https://geonovum.github.io/nl-lp/",
 
   //-- publishDate is verplicht. Als je werkversie gekozen hebt  dan pakt Respec
   //-- de pushdate maar de publishDate is nog steeds verplicht.
