@@ -1,1 +1,1 @@
-TODO: smanevatting van het document
+TODO: samenvatting van het document

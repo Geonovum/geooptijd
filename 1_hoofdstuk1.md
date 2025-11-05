@@ -1,7 +1,4 @@
 # Inleiding op het toepassingsprofiel
-<p class="note" title="index">
-Dit hoofdstuk is toegevoegd met `class="informative"` in `config.js`.
-</p>
 
 ## Aanleiding
 Erfgoedinstellingen beheren waardevolle informatie die sterk verbonden is met specifieke locaties. Tien jaar geleden heeft dit al geleid tot het project Erfgoed & Locatie. Voor een effectieve ontsluiting en benutting van deze data is het noodzakelijk om erfgoedinformatie te koppelen aan geografische locaties uit het verleden (historische geo-informatie). Dit maakt het mogelijk om historische gegevens ruimtelijk te verkennen en zogenaamde tijdreizen op locatie uit te voeren, waarbij gebruikers van bijvoorbeeld de 
