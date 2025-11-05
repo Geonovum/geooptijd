@@ -48,6 +48,8 @@ Een andere grote partner in het Pelagios Network, en bovendien de grote aanjager
 
 Hoewel het Linked Places format niet is uitontwikkeld of formeel als standaard is vastgelegd, is het in de afgelopen jaren wel tot een _de facto_ standaard uitgegroeid en wordt het breed gedragen en geïmplementeerd door de verschillende partners aangesloten op het Pelagios Network. De World Historical Gazetteer heeft een eigen validator ontwikkeld om JSON-LD bestanden te [valideren](https://github.com/WorldHistoricalGazetteer/website/blob/staging/validation/static/lpf_v2.0.jsonld).
 
+OPMERKING OVER LPF VERSUS LPO (format vs ontology).
+
 ## Belangrijkste uitbreidingen
 
 Voor het Nederlands toepassingsprofiel Linked Places is er voor gekozen de standaard Linked Places op de volgende punten uit te breiden c.q. te beperken:
