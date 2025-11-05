@@ -10,13 +10,22 @@ In dit kader hebben het <a href='https://netwerkdigitaalerfgoed.nl/wat-wij-doen/
 
 
 ## Afbakening en uitgangspunten
+Er is in Nederland veel digitale erfgoedinformatie beschikbaar. Veel van deze informatie over een cultuurhistorisch object of erfgoedobject heeft een locatieaanduiding en een tijdaanduiding. Deze locatieaanduiding is nog niet eenduidig gestandaard beschikbaar is waardoor het ruimtelijk te verkennen en zogenaamde tijdreizen op locatie niet mogelijk is. 
+Daar waar standaardisatie in het geo-informatie veelal vanzelfsprekend is, vaak zelfs via wet- en regelgeving verplicht is om het gebruiken, is dat niet het geval voor digitale erfgoedinformatie. Om digitale erfgoedinformatie met een locatie op een eenduidige manier houdbaar, bruikbaar en zichtbaar te maken is gezocht naar een verbinding tussen de geo-standaarden en digitaal erfgoed. De standaard Linked Places lijkt hierin een verbindende rol te kunnen vervullen. De Linked Places standaard geeft voor het cultuurhistorisch object of erfgoedobject context voor de locatie en in de tijd: wie, wat waar en wanneer? De standaard maakt het mogelijk op verschillende manieren een locatieaanduiding toe te voegen, inclusief wanneer. 
 
+Uitgangspunten bij het opstellen van het Nederlands toepassingsprofiel voor Linked Places zijn: 
+- aansluiting op (inter)nationale standaarden en architectuur; 
+- voor de inhoudelijk verbinding in het digitaal erfgoeddomein zijn de gedeelde terminologiebronnen leidend; 
+- scheiden van data en visualisatie;
+- data bij de bron:
+- gebruik van persistente identifiers,
+- publiceren van erfgoed data als Linked Data,
+- datasets zodanig publiceren zodat zij via het Datasetregister vindbaar zijn,
+- personen, plaatsen, onderwerpen, gebeurtenissen koppelen aan gedeelde definities in terminologiebronnen in het Termennetwerk,
+- afbeeldingen publiceren op basis van de IIIF standaard.
 
 
 ## Uitgangsbronnen en inspiratie
-
-TO DO
-
 Ongeveer tegelijkertijd met het ontstaan van Erfgoed en Locatie en haar '[Places in Time](https://netwerkdigitaalerfgoed.nl/wp-content/uploads/2021/01/historische_geocoderhackalod2021_jvand.pdf)' model, werkte de Pelagios Gazetteer (een internationale digitale plaatsnamendatabank voor de antieke wereld) aan het [Pelagios Gazetteer Interconnection Format](https://github.com/pelagios/pelagios-cookbook/wiki/Pelagios-Gazetteer-Interconnection-Format). Beide projecten werkten met enigszins vergelijkbare uitgangspunten om historische plaatsen te ontsluiten. Darabij is bijvoorbeeld te denken aan de volgende elementen die een 'plaats in tijd' heeft of kan hebben:
 * Een titel of _preferred label_
 * Een (arbitraire) naam (vermelding, attestatie, of (spellings)variant)
@@ -41,9 +50,16 @@ Hoewel het Linked Places format niet is uitontwikkeld of formeel als standaard i
 
 ## Belangrijkste uitbreidingen
 
-TO DO
+Voor het Nederlands toepassingsprofiel Linked Places is er voor gekozen de standaard Linked Places op de volgende punten uit te breiden c.q. te beperken:
+- voor het attribuut fclasses de lijst van waarden van aansluiten op de stereotypen zoals gebruikt door NEN 3610;
+- voor het attribuut types wordt een Nederlandse ontologie gemaakt op basis van os de Getty Institute Art and Architecture Thesaurus (AAT) en INSPIRE zodat deze aansluit op de Nederlandse praktijk;
+- voor het attribuut geometry wordt geen gebruik gemaakt van het geometrietype GeometryCollection. 
+
 
 ## Modellering en keuzes
+Voor de Nederlandse toepassing van het  Linked Places format is een modellering gekozen die aansluit op het Metamodel Informatiemodellering (MIM) LINK: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering-mim. Daarnaast zijn er keuzes gemaakt voor de bruikbaarheid , interoperabiliteit en op de architecturen en standaarden voor digitaal erfgoed en geo-informatie. 
+
+In het Nederlands toepassingsprofiel zijn een aantal elementen (attributen) als verplicht te gebruiken opgenomen. In het Linked Places format zijn deze als aanbevolen en facultatieve elementen in Linked Places. 
 
 <p>
     Het Nederlands profiel voor Linked Places (NL-LP) bouwt voort op de 
