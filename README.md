@@ -9,4 +9,5 @@ In deze repository is te vinden:
 - achtergronddocumentatie
 - presentaties
 - voorbeeld queries
-- [toepassingsprofiel (werkversie)](https://geonovum.github.io/nl-lp/)
+- use cases 
+- [toepassingsprofiel (werkversie)](https://geonovum.github.io/geooptijd/)
