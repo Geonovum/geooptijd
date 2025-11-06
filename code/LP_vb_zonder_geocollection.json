@@ -9,7 +9,7 @@
                 "title": "Abingdon (UK)",
                 "ccodes": ["GB"]
             },
-            "geometry": 
+            "geometry": [
                     {
                         "type": "Point",
                         "coordinates": [
@@ -32,7 +32,6 @@
                         ],
                         "certainty": "certain"
                     },
-            "geometry_2":         
                     {
                         "type": "Point",
                         "coordinates": [
@@ -49,6 +48,7 @@
                         },
                         "certainty": "uncertain"
                     }
+              ]
         }
     ]
 }
