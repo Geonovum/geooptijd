@@ -59,9 +59,9 @@ Voor het Nederlands toepassingsprofiel Linked Places is er voor gekozen de stand
 
 
 ## Modellering en keuzes
-Voor de Nederlandse toepassing van het  Linked Places format is een modellering gekozen die aansluit op het Metamodel Informatiemodellering (MIM) LINK: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering-mim. Daarnaast zijn er keuzes gemaakt voor de bruikbaarheid , interoperabiliteit en op de architecturen en standaarden voor digitaal erfgoed en geo-informatie. 
+Voor de Nederlandse toepassing van het Linked Places format is een modellering gekozen die aansluit op het Metamodel Informatiemodellering (MIM) LINK: https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering-mim. Daarnaast zijn er keuzes gemaakt voor de bruikbaarheid, interoperabiliteit en op de architecturen en standaarden voor digitaal erfgoed en geo-informatie. 
 
-In het Nederlands toepassingsprofiel zijn een aantal elementen (attributen) als verplicht te gebruiken opgenomen. In het Linked Places format zijn deze als aanbevolen en facultatieve elementen in Linked Places. 
+In het Nederlands toepassingsprofiel zijn een aantal elementen (attributen) als verplicht te gebruiken opgenomen, waarbij geprobeerd wordt aan te sluiten op de aanbevelingen in het Linked Places format (dat zowel verplichte, aanbevolen, en facultatieve attributen beschrijft). 
 
 <p>
     Het Nederlands profiel voor Linked Places (NL-LP) bouwt voort op de 
