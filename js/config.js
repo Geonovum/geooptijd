@@ -72,6 +72,21 @@ let respecConfig = {
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
+	   {
+        name: "Rombert Stapel",
+        company: "KNAW Humanities Cluster",
+        companyURL: "https://huc.knaw.nl/",
+      }
+	   {
+        name: "Thomas Vermaut",
+        company: "KNAW Humanities Cluster",
+        companyURL: "https://huc.knaw.nl/",
+      }
+	   {
+        name: "Joop Vanderheiden",
+        company: "Rijksdienst voor het Cultureel Erfgoed",
+        companyURL: "https://www.cultureelerfgoed.nl/",
+      }
     ],
 
   // TODO: Vul de github URL in.
