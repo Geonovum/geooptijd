@@ -32,6 +32,7 @@ Ongeveer tegelijkertijd met het ontstaan van Erfgoed en Locatie en haar '[Places
 * Provenantie (een link naar de bron)
 * Een unieke identifier
 * Een plaatstype (de _plaats_ Groningen, de _gemeente_ Groningen, de _provincie_ Groningen, de _rivier_ de Hunze, de _straat_ Astraat)
+  * Eventueel aangevuld met een overkoepelende hoofdcategorie (bevolkte plaatsen, administratieve of statistische eenheden, wegen, waterlichamen, regio's of landschappen, gebouwen of complexen (en percelen), landvormen) zoals [GeoNames Feature Classes](https://www.geonames.org/export/codes.html) and [Getty AAT](https://www.getty.edu/research/tools/vocabularies/aat/) dat ook bieden
 * Een periode of tijdsaanduiding, die zowel op de plaats als op attributen kan slaan
 * Een of meerdere geometrieën
 * Een of meerdere relaties (hiërarchisch, ruimtelijk) met andere plaatsen
