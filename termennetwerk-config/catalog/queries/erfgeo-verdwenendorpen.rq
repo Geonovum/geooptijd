@@ -1,0 +1,32 @@
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lpo: <http://linkedpasts.org/ontology#>
+PREFIX geojson: <https://purl.org/geojson/vocab#>
+PREFIX geojsont: <https://github.com/kgeographer/geojson-t#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+
+CONSTRUCT {
+  ?plaats a skos:Concept ;
+     skos:prefLabel ?label ;
+     skos:scopeNote ?scopeNote .
+}
+WHERE {
+  GRAPH <https://linkeddata.cultureelerfgoed.nl/graph/histgeo/verdwenendorpen> {
+    ?plaats a geojson:Feature ;
+       lpo:name_attestation/lpo:toponym ?label ;
+       lpo:name_attestation/lpo:source_label ?bron ;
+       geojsont:geometry/lpo:when/lpo:in/time:year ?jaar ;
+       geojsont:geometry/lpo:setting/geosparql:asWKT ?coord ;
+       lpo:type_attestation/lpo:source_label ?oorzaak ;
+       lpo:type_attestation/lpo:has_certainty ?zekerheid .
+    FILTER(CONTAINS(LCASE(?label), LCASE(?query)))
+
+    BIND(IF(BOUND(?bron),STR(?bron),"") as ?bronText)
+    BIND(IF(BOUND(?jaar),STR(?jaar),"") as ?jaarText)
+    BIND(IF(BOUND(?coord),STR(?coord),"") as ?coordText)
+    BIND(IF(BOUND(?oorzaak),STR(?oorzaak),"") as ?oorzaakText)
+    BIND(IF(BOUND(?zekerheid),STR(?zekerheid),"") as ?zekerheidText)
+    BIND(CONCAT("Jaar: ",?jaarText,"; Bron: ",?bronText,"; Oorzaak: ",?oorzaak,"; Zekerheid: ",?zekerheidText,"; Coordinaten: ",?coordText) as ?scopeNote)
+  }
+}

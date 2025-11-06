@@ -1,0 +1,19 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lpo: <http://linkedpasts.org/ontology#>
+
+CONSTRUCT {
+  ?s a skos:Concept ;
+     skos:prefLabel ?prefLabel ;
+     skos:altLabel ?altLabel ;
+     skos:scopeNote ?scopeNote .
+}
+WHERE {
+  GRAPH <https://linkeddata.cultureelerfgoed.nl/graph/departementen-lpo> {
+  ?s lpo:hasTitle ?label ;
+     lpo:hasName/lpo:toponym ?altLabel .
+
+  FILTER(CONTAINS(LCASE(?label), LCASE(?query))||CONTAINS(LCASE(?altLabel), LCASE(?query)))
+  BIND(CONCAT(?label," 1795-1814 ") as ?prefLabel)
+  BIND("Departement" as ?scopeNote)
+  }
+}

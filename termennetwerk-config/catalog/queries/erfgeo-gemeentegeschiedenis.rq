@@ -1,0 +1,28 @@
+PREFIX sdo: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lpo: <http://linkedpasts.org/ontology#>
+
+CONSTRUCT {
+  ?s a skos:Concept ;
+     skos:prefLabel ?prefLabel ;
+     skos:altLabel ?altLabel ;
+     skos:scopeNote ?scopeNote .
+}
+#SELECT *
+WHERE {
+  GRAPH <https://linkeddata.cultureelerfgoed.nl/graph/gemeentegeschiedenis-lpo> {
+  ?s lpo:hasTitle ?label ;
+     lpo:hasName/lpo:toponym ?altLabel ;
+     lpo:sourceId ?sourceId .
+  OPTIONAL {
+    ?s lpo:hasWhen/lpo:start ?startDatum 
+  }
+  OPTIONAL {
+    ?s lpo:hasWhen/lpo:stop ?eindDatum 
+  }
+  FILTER(CONTAINS(LCASE(?label), LCASE(?query))||CONTAINS(LCASE(?altLabel), LCASE(?query)))
+  BIND(STR(?sourceId) as ?prefLabel)
+  #BIND(CONCAT("Gemeenten op basis van gemeentegeschienis.nl ",STR(?startDatum)," - ",STR(?eindDatum)) as ?scopeNote)
+  BIND(CONCAT("Gemeenten op basis van gemeentegeschienis.nl") as ?scopeNote)
+  }
+}
