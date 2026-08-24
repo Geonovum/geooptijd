@@ -1,7 +1,0 @@
-
-Welcome to Pa11y
-
- > Running Pa11y on URL file:///home/runner/work/geooptijd/geooptijd/snapshot.html
-
-No issues found!
-
