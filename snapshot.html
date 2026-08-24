@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 35.4.1">
+<meta name="generator" content="ReSpec 37.2.0">
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
@@ -16,6 +16,7 @@ dfn{cursor:pointer}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
 .dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
 .dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel .marker.cddl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
 .dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
 .dfn-panel a[href]:hover{border-bottom-width:1px}
 .dfn-panel ul{padding:0}
@@ -62,13 +63,17 @@ a.bibref{text-decoration:none}
 .respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+@media (prefers-color-scheme:dark){
+#references :target{background:color-mix(in srgb, #eaf3ff 15%, transparent)}
+}
+body:has(input[name=color-scheme][value=dark]:checked) #references :target{background:color-mix(in srgb, #eaf3ff 15%, transparent)}
 cite .bibref{font-style:italic}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
 #issue-summary>ul{column-count:2}
-#issue-summary li{list-style:none;display:inline-block}
+#issue-summary li{list-style:none}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
 details.respec-tests-details>*{padding-right:2em}
 details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
@@ -77,7 +82,8 @@ details.respec-tests-details>ul{width:100%;margin-top:-.3em}
 details.respec-tests-details>li{padding-left:1em}
 .self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
-.header-wrapper{display:flex;align-items:baseline;position:relative;left:-.5em}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2):has(+a.self-link){position:relative;left:-.5em}
 :is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-.7em;font-size:1rem;opacity:.5}
 :is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
 :is(h2,h3)+a.self-link{top:-.2em}
@@ -88,6 +94,8 @@ dd{margin-left:0}
 @media print{
 .removeOnSave{display:none}
 }
+body:has(input[name=color-scheme][value=light]:checked),head:not(:has(meta[name=color-scheme][content~=dark]))+body{color-scheme:light}
+body:has(input[name=color-scheme][value=dark]:checked){color-scheme:dark}
 </style>
 <style id="respec-nlgov">
 img.license{float:left;padding-right:5px;background:0 0}
@@ -1057,6 +1065,14 @@ ul.index code{color:inherit}
       "date": "2020-06-30",
       "id": "NLISO19119"
     },
+    "NL-SBB-20241010": {
+      "title": "NNL-SBB - Standaard voor het beschrijven van begrippen",
+      "href": "https://docs.geostandaarden.nl/nl-sbb/def-st-nl-sbb-20241010/",
+      "status": "Vastgestelde versie",
+      "publisher": "Geonovum",
+      "date": "2024-10-10",
+      "id": "NL-SBB-20241010"
+    },
     "NLWFS": {
       "title": "Nederlands profiel op ISO 19142 Geographic information — Web Feature Service, Versie 1.1",
       "href": "https://www.geonovum.nl/geo-standaarden/services/nederlands-wfs-profiel-11-op-iso-19142-voor-web-feature-services-20",
@@ -1361,14 +1377,14 @@ ul.index code{color:inherit}
 }</script>
 <link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
 
-<body class="h-entry toc-inline"><div class="head">
+<body class="h-entry"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://docs.geostandaarden.nl/media/Geonovum.svg" width="132">
   </a> <h1 id="title" class="title">Nederlands profiel voor Linked Places (NL-LP)</h1>
     
     <h2>
       Geonovum Praktijkrichtlijn<br>
       Werkversie
-      <time class="dt-published" datetime="2025-11-10">10 november 2025</time>
+      <time class="dt-published" datetime="2026-08-24">24 augustus 2026</time>
     </h2>
     <dl>
       
@@ -1396,7 +1412,9 @@ ul.index code{color:inherit}
       <dt>Doe mee:</dt><dd>
     <a href="https://github.com/Geonovum/geooptijd/">GitHub Geonovum/geooptijd</a>
   </dd><dd>
-    <a href="https://github.com/Geonovum/geooptijd/issues/">Dien een melding in</a>
+    <a href="https://github.com/Geonovum/geooptijd/issues/">All issues</a>
+  </dd><dd>
+    <a href="https://github.com/Geonovum/geooptijd/issues/new/choose">Dien een melding in</a>
   </dd><dd>
     <a href="https://github.com/Geonovum/geooptijd/commits/">Revisiehistorie</a>
   </dd><dd>
@@ -1414,10 +1432,10 @@ ul.index code{color:inherit}
   </div>
 <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: samenvatting van het document</p>
 </section>
-<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding-op-het-toepassingsprofiel"><bdi class="secno">1. </bdi>Inleiding op het toepassingsprofiel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aanleiding"><bdi class="secno">1.1 </bdi>Aanleiding</a></li><li class="tocline"><a class="tocxref" href="#afbakening-en-uitgangspunten"><bdi class="secno">1.2 </bdi>Afbakening en uitgangspunten</a></li><li class="tocline"><a class="tocxref" href="#uitgangsbronnen-en-inspiratie"><bdi class="secno">1.3 </bdi>Uitgangsbronnen en inspiratie</a></li><li class="tocline"><a class="tocxref" href="#belangrijkste-uitbreidingen"><bdi class="secno">1.4 </bdi>Belangrijkste uitbreidingen</a></li><li class="tocline"><a class="tocxref" href="#modellering-en-keuzes"><bdi class="secno">1.5 </bdi>Modellering en keuzes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kernprincipes"><bdi class="secno">1.5.1 </bdi>Kernprincipes</a></li><li class="tocline"><a class="tocxref" href="#temporalisering"><bdi class="secno">1.5.2 </bdi>Temporalisering</a></li><li class="tocline"><a class="tocxref" href="#geometrie"><bdi class="secno">1.5.3 </bdi>Geometrie</a></li><li class="tocline"><a class="tocxref" href="#gebruik-binnen-nl-lp"><bdi class="secno">1.5.4 </bdi>Gebruik binnen NL-LP</a></li></ol></li><li class="tocline"><a class="tocxref" href="#technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">1.7 </bdi>Conclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gegevensdefinitie"><bdi class="secno">2. </bdi>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">2.1 </bdi>Definities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names"><bdi class="secno">2.1.1 </bdi>Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.3 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.4 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
+<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding-op-het-toepassingsprofiel"><bdi class="secno">1. </bdi>Inleiding op het toepassingsprofiel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aanleiding"><bdi class="secno">1.1 </bdi>Aanleiding</a></li><li class="tocline"><a class="tocxref" href="#afbakening-en-uitgangspunten"><bdi class="secno">1.2 </bdi>Afbakening en uitgangspunten</a></li><li class="tocline"><a class="tocxref" href="#uitgangsbronnen-en-inspiratie"><bdi class="secno">1.3 </bdi>Uitgangsbronnen en inspiratie</a></li><li class="tocline"><a class="tocxref" href="#belangrijkste-uitbreidingen"><bdi class="secno">1.4 </bdi>Belangrijkste uitbreidingen</a></li><li class="tocline"><a class="tocxref" href="#modellering-en-keuzes"><bdi class="secno">1.5 </bdi>Modellering en keuzes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kernprincipes"><bdi class="secno">1.5.1 </bdi>Kernprincipes</a></li><li class="tocline"><a class="tocxref" href="#temporalisering"><bdi class="secno">1.5.2 </bdi>Temporalisering</a></li><li class="tocline"><a class="tocxref" href="#geometrie"><bdi class="secno">1.5.3 </bdi>Geometrie</a></li><li class="tocline"><a class="tocxref" href="#gebruik-binnen-nl-lp"><bdi class="secno">1.5.4 </bdi>Gebruik binnen NL-LP</a></li></ol></li><li class="tocline"><a class="tocxref" href="#technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</a></li><li class="tocline"><a class="tocxref" href="#conclusie"><bdi class="secno">1.7 </bdi>Conclusie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gegevensdefinitie"><bdi class="secno">2. </bdi>Gegevensdefinitie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">2.1 </bdi>Definities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names"><bdi class="secno">2.1.1 </bdi>Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.3 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.4 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Termen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Termen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
 
 
-<section class="informative" id="inleiding-op-het-toepassingsprofiel"><div class="header-wrapper"><h2 id="x1-inleiding-op-het-toepassingsprofiel"><bdi class="secno">1. </bdi>Inleiding op het toepassingsprofiel</h2><a class="self-link" href="#inleiding-op-het-toepassingsprofiel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+<section class="informative" id="inleiding-op-het-toepassingsprofiel"><div class="header-wrapper"><h2 id="x1-inleiding-op-het-toepassingsprofiel"><bdi class="secno">1. </bdi>Inleiding op het toepassingsprofiel</h2><a class="self-link" href="#inleiding-op-het-toepassingsprofiel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet-normatief.</em></p>
 <section id="aanleiding"><div class="header-wrapper"><h3 id="x1-1-aanleiding"><bdi class="secno">1.1 </bdi>Aanleiding</h3><a class="self-link" href="#aanleiding" aria-label="Permalink for Section 1.1"></a></div>
 <p>Erfgoedinstellingen beheren waardevolle informatie die sterk verbonden is met specifieke locaties, in specifieke momenten in de tijd. Voor een effectieve ontsluiting en benutting van deze data is het noodzakelijk om erfgoedinformatie te koppelen aan geografische locaties uit het verleden (historische geo-informatie), waarbij de historische context van die locatie geborgd blijft. Moderne plaatsnamen-databanken (gazetteers) zoals <a href="https://geonames.org/" target="_blank">GeoNames</a>, <a href="https://www.getty.edu/research/tools/vocabularies/tgn/index.html" target="_blank">Getty TGN</a>, <a href="https://wikidata.org/" target="_blank">Wikidata</a> of de <a href="https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag" target="_blank">BAG</a> bieden wel veel plaatsen, maar zijn beperkt bruikbaar voor historische aanduidingen zoals oude gemeentenamen, spellingsvarianten, verdwenen dorpen, of administratieve eenheden uit het verleden. Tien jaar geleden is in het kader van het project <a href="http://erfgoedenlocatie.nl" target="_blank">Erfgoed &amp; Locatie</a> al een poging gedaan om te voorzien in de behoefte om historische geografische informatie in Nederland beter te ontsluiten, maar dit project wordt niet meer onderhouden. </p>
 <p>Het op een juiste manier ontsluiten van historische geo-informatie maakt het mogelijk om historische gegevens effectief ruimtelijk te verkennen en zogenaamde tijdreizen op locatie uit te voeren, waarbij gebruikers van bijvoorbeeld de 
@@ -1481,9 +1499,7 @@ Daar waar standaardisatie in het geo-informatie veelal vanzelfsprekend is, vaak 
     waarmee historische en geografische gegevens semantisch en temporeel kunnen worden beschreven.
     Het profiel gebruikt deze ontologie om historische plaatsgegevens uit het Nederlandse erfgoeddomein 
     als Linked Data te publiceren.
-  </p>
-
-  <section id="kernprincipes"><div class="header-wrapper"><h4 id="x1-5-1-kernprincipes"><bdi class="secno">1.5.1 </bdi>Kernprincipes</h4><a class="self-link" href="#kernprincipes" aria-label="Permalink for Section 1.5.1"></a></div>
+  </p>  <section id="kernprincipes"><div class="header-wrapper"><h4 id="x1-5-1-kernprincipes"><bdi class="secno">1.5.1 </bdi>Kernprincipes</h4><a class="self-link" href="#kernprincipes" aria-label="Permalink for Section 1.5.1"></a></div>
   <ul>
     <li>
       Een plaats of ander geografisch object wordt gemodelleerd als een 
@@ -1508,33 +1524,25 @@ Daar waar standaardisatie in het geo-informatie veelal vanzelfsprekend is, vaak 
         <li><code>lpo:LinkAttestation</code> – verbindt een entiteit met een externe bron of gazetteer.</li>
       </ul>
     </li>
-  </ul>
-
-  </section><section id="temporalisering"><div class="header-wrapper"><h4 id="x1-5-2-temporalisering"><bdi class="secno">1.5.2 </bdi>Temporalisering</h4><a class="self-link" href="#temporalisering" aria-label="Permalink for Section 1.5.2"></a></div>
+  </ul>  </section><section id="temporalisering"><div class="header-wrapper"><h4 id="x1-5-2-temporalisering"><bdi class="secno">1.5.2 </bdi>Temporalisering</h4><a class="self-link" href="#temporalisering" aria-label="Permalink for Section 1.5.2"></a></div>
   <p>
     De eigenschap <code>lpo:when</code> kan aan vrijwel elk element worden toegevoegd om de periode 
     van geldigheid of bestaan aan te geven. Een <code>lpo:Timespan</code> kan grenzen hebben
     (<code>lpo:earliest</code>, <code>lpo:latest</code>) of een expliciete start- en eindtijd
     (<code>lpo:has_start</code>, <code>lpo:has_end</code>).
     Ook relaties en naamattestaties kunnen een eigen tijdsbereik hebben.
-  </p>
-
-  </section><section id="geometrie"><div class="header-wrapper"><h4 id="x1-5-3-geometrie"><bdi class="secno">1.5.3 </bdi>Geometrie</h4><a class="self-link" href="#geometrie" aria-label="Permalink for Section 1.5.3"></a></div>
+  </p>  </section><section id="geometrie"><div class="header-wrapper"><h4 id="x1-5-3-geometrie"><bdi class="secno">1.5.3 </bdi>Geometrie</h4><a class="self-link" href="#geometrie" aria-label="Permalink for Section 1.5.3"></a></div>
   <p>
     De eigenschap <code>geojson-t:geometry</code> (uit GeoJSON-T) is een uitbreiding van 
     <code>geojson:geometry</code> die toelaat om een geometrie te koppelen aan een
     <code>lpo:Setting</code>, inclusief temporele context (<code>lpo:when</code>).
-  </p>
-
-  </section><section id="gebruik-binnen-nl-lp"><div class="header-wrapper"><h4 id="x1-5-4-gebruik-binnen-nl-lp"><bdi class="secno">1.5.4 </bdi>Gebruik binnen NL-LP</h4><a class="self-link" href="#gebruik-binnen-nl-lp" aria-label="Permalink for Section 1.5.4"></a></div>
+  </p>  </section><section id="gebruik-binnen-nl-lp"><div class="header-wrapper"><h4 id="x1-5-4-gebruik-binnen-nl-lp"><bdi class="secno">1.5.4 </bdi>Gebruik binnen NL-LP</h4><a class="self-link" href="#gebruik-binnen-nl-lp" aria-label="Permalink for Section 1.5.4"></a></div>
   <p>
     In het Nederlands profiel worden deze LPO-constructies toegepast op erfgoedlocaties, 
     historische administratieve eenheden en andere plaatsen met ruimtelijke en temporele variatie. 
     Elke historische naam of afbakening wordt vastgelegd als een afzonderlijke
     <code>lpo:NameAttestation</code> of <code>lpo:TypeAttestation</code> met eigen periode en bron.
-  </p> 
-
-</section></section><section id="technische-keuzes"><div class="header-wrapper"><h3 id="x1-6-technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</h3><a class="self-link" href="#technische-keuzes" aria-label="Permalink for Section 1.6"></a></div>
+  </p> </section></section><section id="technische-keuzes"><div class="header-wrapper"><h3 id="x1-6-technische-keuzes"><bdi class="secno">1.6 </bdi>Technische keuzes</h3><a class="self-link" href="#technische-keuzes" aria-label="Permalink for Section 1.6"></a></div>
 <p>TO DO </p>
 </section><section id="conclusie"><div class="header-wrapper"><h3 id="x1-7-conclusie"><bdi class="secno">1.7 </bdi>Conclusie</h3><a class="self-link" href="#conclusie" aria-label="Permalink for Section 1.7"></a></div>
 </section></section>
@@ -1575,15 +1583,15 @@ Relaties (bijv. “hoofdstad van” gedurende een specifieke periode)</p>
 
 
 
-<section id="conformance"><div class="header-wrapper"><h2 id="x3-conformiteit"><bdi class="secno">3. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 3."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
+<section id="conformance"><div class="header-wrapper"><h2 id="x3-conformiteit"><bdi class="secno">3. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 3."></a></div><p>Naast onderdelen die als niet-normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet-normatief. Verder is alles in dit document normatief.</p></section>
 <section id="tof"></section>
 <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
-    <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
+    <div class="header-wrapper"><h3 id="a-1-termen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Termen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
     <ul class="index">
     
   </ul>
   </section><section id="index-defined-elsewhere">
-    <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
+    <div class="header-wrapper"><h3 id="a-2-termen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Termen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
     <ul class="index">
     
   </ul>
@@ -1592,7 +1600,7 @@ Relaties (bijv. “hoofdstad van” gedurende een specifieke periode)</p>
 
 
 <p role="navigation" id="back-to-top">
-    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+    <a href="#title"><abbr title="Terug naar boven">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
@@ -1608,8 +1616,11 @@ function setupPanel() {
 }
 
 function panelListener() {
-  /** @type {HTMLElement} */
+  /** @type {HTMLElement | null} */
   let panel = null;
+  /**
+   * @param {KeyboardEvent|MouseEvent} event
+   */
   return event => {
     const { target, type } = event;
 
@@ -1617,24 +1628,34 @@ function panelListener() {
 
     // For keys, we only care about Enter key to activate the panel
     // otherwise it's activated via a click.
-    if (type === "keydown" && event.key !== "Enter") return;
+    if (
+      type === "keydown" &&
+      /** @type {KeyboardEvent} */ (event).key !== "Enter"
+    )
+      return;
 
     const action = deriveAction(event);
 
     switch (action) {
       case "show": {
         hidePanel(panel);
-        /** @type {HTMLElement} */
+        /** @type {HTMLElement | null} */
         const dfn = target.closest("dfn, .index-term");
+        if (!dfn?.id) break;
         panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
-        const coords = deriveCoordinates(event);
+        if (!panel) break;
+        const coords = deriveCoordinates(
+          /** @type {MouseEvent|KeyboardEvent} */ (event)
+        );
         displayPanel(dfn, panel, coords);
         break;
       }
       case "dock": {
-        panel.style.left = null;
-        panel.style.top = null;
-        panel.classList.add("docked");
+        if (panel) {
+          panel.style.left = "";
+          panel.style.top = "";
+          panel.classList.add("docked");
+        }
         break;
       }
       case "hide": {
@@ -1685,7 +1706,8 @@ function deriveAction(event) {
     if (hitALink) {
       return target.classList.contains("self-link") ? "hide" : "dock";
     }
-    const panel = target.closest(".dfn-panel");
+
+    const panel = /** @type {HTMLElement} */ (target.closest(".dfn-panel"));
     return panel.classList.contains("docked") ? "hide" : "none";
   }
   if (document.querySelector(".dfn-panel:not([hidden])")) {
@@ -1729,9 +1751,9 @@ function displayPanel(dfn, panel, { x, y }) {
     const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
     const newCaretOffset = left - newLeft;
     panel.style.left = `${newLeft}px`;
-    /** @type {HTMLElement} */
+    /** @type {HTMLElement | null} */
     const caret = panel.querySelector(".caret");
-    caret.style.left = `${newCaretOffset}px`;
+    if (caret) caret.style.left = `${newCaretOffset}px`;
   }
 
   // As it's a dialog, we trap focus.
@@ -1780,6 +1802,9 @@ function trapFocus(panel, dfn) {
 function createTrapListener(anchors, panel, dfn) {
   const lastIndex = anchors.length - 1;
   let currentIndex = 0;
+  /**
+   * @param {KeyboardEvent} event
+   */
   return event => {
     switch (event.key) {
       // Hitting "Tab" traps us in a nice loop around elements.
@@ -1809,7 +1834,7 @@ function createTrapListener(anchors, panel, dfn) {
   };
 }
 
-/** @param {HTMLElement} panel */
+/** @param {HTMLElement | null} panel */
 function hidePanel(panel) {
   if (!panel) return;
   panel.hidden = true;
